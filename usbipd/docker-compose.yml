@@ -1,0 +1,9 @@
+services:
+  usbipd:
+    build: .
+    container_name: usbipd
+    privileged: true
+    network_mode: host
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+    restart: unless-stopped
